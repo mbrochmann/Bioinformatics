@@ -177,6 +177,13 @@ def FrequentWords(line, kmer_length, PatternToNumberDict):
 
 def ClumpFinding(Genome, k, L, t):
     """ 
+    Function to find "clumps", or presence of t or more occurrences of a pattern
+    of length k in a window of size L in Genome. 
+
+    clump_array has one entry for each possible pattern of length k
+    at the end of the function, each entry is true if we have found
+    one or more clumps of the corresponding pattern in the genome 
+
     Genome is the text string representing the genome
     k is the pattern length
     t is the minimum number of times we want a pattern to be repeated in the window
